@@ -1,0 +1,58 @@
+<h2>
+  Adaugare buget
+</h2>
+
+<div style="font-size: 18px">
+  <form [formGroup]="form">
+    <div class="row">
+      <div class="col-sm-4">
+        <mat-form-field class="company-name">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name"/>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <mat-form-field class="company-name">
+          <mat-label>Registration code</mat-label>
+          <input matInput formControlName="registrationCode">
+        </mat-form-field>
+      </div>
+      <div class="col-sm-4">
+        <mat-form-field class="company-name">
+          <mat-label>Partner</mat-label>
+          <mat-select formControlName="partner">
+            <mat-option [value]="'Gogu'">Gogu</mat-option>
+            <mat-option [value]="'Misu'">Misu</mat-option>
+            <mat-option [value]="'Ciucurel'">Ciucurel</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <mat-form-field class="company-name">
+          <mat-label>Registration number</mat-label>
+          <input matInput formControlName="registrationNumber">
+        </mat-form-field>
+      </div>
+      <div class="col-sm-4">
+        <mat-form-field class="company-name">
+          <mat-label>Group</mat-label>
+          <input matInput formControlName="group">
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="row">
+  <div class="col-sm-10">
+  </div>
+  <div class="col-sm-2">
+    <div class="row">
+      <a mat-raised-button color="accent" class="pull-right" (click)="save()">Save</a>
+    </div>
+  </div>
+</div>

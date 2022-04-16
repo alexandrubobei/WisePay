@@ -1,0 +1,89 @@
+<div class="company-list-header">
+  <div class="row">
+    <div class="col-sm-10">
+      <h2>Accounts</h2>
+    </div>
+    <div class="col-sm-2">
+      <div class="row">
+        <a mat-raised-button color="accent" routerLink="/accounts/add" class="pull-right">Adaugare</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<mat-card class="card">
+  <mat-card-header class="card-header card-header-danger">
+    <mat-card-title>
+      <h4>Simple Table</h4>
+    </mat-card-title>
+    <mat-card-subtitle>
+      <p> Here is a subtitle for this table</p>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content class="card-body">
+    <div class="table-responsive">
+      <table mat-table [dataSource]="accounts" matSort style="width:100%">
+        <ng-container matColumnDef="select">
+          <th mat-header-cell *matHeaderCellDef>
+            <mat-checkbox
+              [indeterminate]="selection.hasValue() && !isAllSelected()"
+              (change)="$event ? masterToggle() : null"
+              [checked]="selection.hasValue() && isAllSelected()">
+            </mat-checkbox>
+          </th>
+          <td mat-cell *matCellDef="let row">
+            <mat-checkbox
+              [checked]="selection.isSelected(row)"
+              (click)="$event.stopPropagation()"
+              (change)="$event ? selection.toggle(row) : null">
+            </mat-checkbox>
+          </td>
+        </ng-container>
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> No.</th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Name</th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+        <!-- From Column -->
+        <ng-container matColumnDef="amount">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Amount</th>
+          <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+        </ng-container>
+        <!-- Created at column -->
+        <ng-container matColumnDef="createdAt">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Created at</th>
+          <td mat-cell *matCellDef="let element"> {{element.createdAt | date}} </td>
+        </ng-container>
+        <!-- Updated at column -->
+        <ng-container matColumnDef="updatedAt">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Modified at</th>
+          <td mat-cell *matCellDef="let element"> {{element.modifiedAt| date}} </td>
+        </ng-container>
+
+        <!-- Actions Column -->
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let row" style="width:120px">
+            <button mat-icon-button>
+              <mat-icon aria-hidden="false" aria-label="Example home icon">edit</mat-icon>
+            </button>
+            <button mat-icon-button>
+              <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                     showFirstLastButtons
+                     aria-label="Select page of periodic elements">
+      </mat-paginator>
+    </div>
+  </mat-card-content>
+</mat-card>

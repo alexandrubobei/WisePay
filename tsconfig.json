@@ -10,6 +10,7 @@
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "strictPropertyInitialization": false,
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
@@ -21,7 +22,10 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@mt/core": ["src/app/core/index.ts"],
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

@@ -1,0 +1,153 @@
+<div class="sidebar">
+  <div class="side-nav-header">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="m-3">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="layer-container">
+                <mat-icon>layers</mat-icon>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="app-name-container">
+                <span>Budget tracker</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sidebar-wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="accounts-label-container">
+          <span class="accounts-label">ACCOUNTS</span>
+        </div>
+        <div ngbDropdown class="d-inline-block">
+          <button type="button" class="btn btn-light accounts-button" id="accounts" ngbDropdownToggle>
+            <div class="row contents">
+              <div class="col-sm-12">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <img class="card-size"
+                         src="https://th.bing.com/th/id/R.0297d851992eec9bbb61e9b71a2967f9?rik=AI3tbIpcBZtaKg&pid=ImgRaw&r=0"
+                         alt="">
+                  </div>
+                  <div class="col-sm-6">
+                    <div>
+                      <div class="row bank-name">
+                        BCR
+                      </div>
+                      <div class="row amount">
+                        1521 RON
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </button>
+          <div ngbDropdownMenu aria-labelledby="accounts">
+            <button ngbDropdownItem>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <img
+                        class="card-size bank-card"
+                        src="https://th.bing.com/th/id/R.0297d851992eec9bbb61e9b71a2967f9?rik=AI3tbIpcBZtaKg&pid=ImgRaw&r=0"
+                        alt="">
+                    </div>
+                    <div class="col-md-10 bank-name">
+                      <span>Business Debit - BCR</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </button>
+            <button ngbDropdownItem>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <img
+                        class="card-size bank-card"
+                        src="https://th.bing.com/th/id/R.ac8ade58b7abf5f5c48dbf032f21e8ff?rik=jmjh%2fE6db4Z0Dg&pid=ImgRaw&r=0"
+                        alt="">
+                    </div>
+                    <div class="col-md-10 bank-name">
+                      <span>Personal Debit - BCR</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </button>
+            <button ngbDropdownItem>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <img
+                        class="card-size bank-card"
+                        src="https://th.bing.com/th/id/R.5877937f4b27328ace82f52d8e4fc0f5?rik=N6%2bKd%2ftYcp3Ogw&pid=ImgRaw&r=0"
+                        alt="">
+                    </div>
+                    <div class="col-md-10 bank-name">
+                      <span>Personal Debit - ING</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </button>
+            <button ngbDropdownItem>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <img
+                        class="card-size bank-card"
+                        src="https://myuccu.com/wp-content/uploads/2018/11/UCCU_Card-Large-768x512.png"
+                        alt="">
+                    </div>
+                    <div class="col-md-10 bank-name">
+                      <span>Personal Credit - ING</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+        <app-information-panel
+          [icon]="'local_atm'"
+          [amount]="'470 RON'"
+          [iconBackgroundClass]="'icon-background-blue'"
+          [iconColorClass]="'icon-color-blue'">
+        </app-information-panel>
+
+        <app-information-panel
+          [icon]="'credit_card'"
+          [amount]="'4777 ON'"
+          [iconBackgroundClass]="'icon-background-purple'"
+          [iconColorClass]="'icon-color-purple'">
+        </app-information-panel>
+
+        <app-information-panel
+          [icon]="'receipt'"
+          [amount]="'35534 RON'"
+          [iconBackgroundClass]="'icon-background-red'"
+          [iconColorClass]="'icon-color-red'">
+        </app-information-panel>
+
+        <app-information-panel
+          [icon]="'work_outline'"
+          [amount]="'555 RON'"
+          [iconBackgroundClass]="'icon-background-orange'"
+          [iconColorClass]="'icon-color-orange'">
+        </app-information-panel>
+      </div>
+    </div>
+  </div>
+</div>

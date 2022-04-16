@@ -1,0 +1,33 @@
+<mat-toolbar style="background: transparent; padding-right:0">
+  <div class="row toolbar-content" style="padding-right: 0">
+    <div class="col-sm-12 col-header" style="padding-right: 0">
+      <div class="row toolbar-content">
+        <div class="top-bar">
+          <div class="toolbar">
+            <nav mat-tab-nav-bar class="nav-bar" [tabPanel]="tabPanel">
+              <a mat-tab-link class="nav-bar" *ngFor="let link of links" routerLink="transactions/"
+                 (click)="activeLink = link"
+                 [active]="activeLink == link"> {{link}} </a>
+            </nav>
+            <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+          </div>
+          <div ngbDropdown class="d-inline-block profile-button">
+            <button type="button" class="btn profile-btn" id="dropdownBasic1" ngbDropdownToggle>Alex Bobei</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button ngbDropdownItem>Action - 1</button>
+              <button ngbDropdownItem>Another Action</button>
+              <button ngbDropdownItem>Something else is here</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-toolbar>
+<mat-menu #menu="matMenu">
+  <h4 class="name">John Smith</h4>
+  <p class="designation">Software Engineer</p>
+  <mat-divider></mat-divider>
+  <button mat-menu-item routerLink="/user-management/profile">Profile</button>
+  <button mat-menu-item>Logout</button>
+</mat-menu>

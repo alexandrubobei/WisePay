@@ -1,0 +1,52 @@
+<mat-card class="card">
+  <mat-card-header class="card-header card-header-danger">
+    <mat-card-title>
+      <h2>Add account</h2>
+    </mat-card-title>
+    <mat-card-subtitle>
+      <p> Here is a subtitle for this table</p>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content class="card-body">
+    <div style="font-size: 18px">
+      <form [formGroup]="form">
+        <div class="row">
+          <div class="col-sm-4">
+            <mat-form-field class="account-name">
+              <mat-label>Name</mat-label>
+              <input matInput formControlName="name"/>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <mat-form-field class="amount">
+              <mat-label>Suma</mat-label>
+              <input matInput formControlName="amount">
+            </mat-form-field>
+          </div>
+          <div class="col-sm-4">
+            <mat-form-field class="account-type">
+              <mat-label>Tip</mat-label>
+              <mat-select formControlName="accountTypeId">
+                <mat-option [value]="'1'">Economii</mat-option>
+                <mat-option [value]="'2'">Debit</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-10">
+      </div>
+      <div class="col-sm-2">
+        <div class="row">
+          <a mat-raised-button color="accent" class="pull-right" (click)="save()">Save</a>
+        </div>
+      </div>
+    </div>
+
+  </mat-card-content>
+</mat-card>

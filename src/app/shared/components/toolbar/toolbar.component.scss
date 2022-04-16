@@ -1,0 +1,69 @@
+@import "../../../../../node_modules/@angular/material/theming";
+
+mat-toolbar {
+  background: #{map_get($mat-indigo, 500)};
+  color: white;
+}
+
+.menu-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;
+
+  mat-icon {
+    margin-right: 8px;
+  }
+}
+
+.toolbar {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid whitesmoke;
+  margin-right: 10px;
+}
+
+.top-bar {
+  display: flex;
+  padding-right: 0;
+  height: 64px;
+}
+
+.col-header {
+  height: 64px
+}
+
+.toolbar-content {
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+}
+
+.profile-button {
+  height: 64px;
+
+  .profile-btn {
+    background-color: white;
+    height: 64px;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+  }
+}
+
+::ng-deep {
+  .mat-ink-bar {
+    padding-bottom: 2px;
+    //margin-left:20px;
+    //width:140px !important;
+  }
+}
+
+.nav-bar {
+  height: 64px;
+  border-bottom: none;
+}
+
