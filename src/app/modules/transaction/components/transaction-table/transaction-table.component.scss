@@ -1,0 +1,171 @@
+@import "../../../../../../node_modules/@angular/material/theming";
+
+.company-list-header {
+  padding-bottom: 20px;
+  margin-right: 10px;
+}
+
+th.mat-sort-header-sorted {
+}
+
+.mat-column-select {
+  overflow: initial;
+}
+
+.budget-content {
+  padding-bottom: 50px;
+}
+
+
+.account-select, .budget-type {
+  width: 100%;
+}
+
+th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+  border: none;
+}
+
+.amount {
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+  display: block;
+  position: relative;
+
+  &.amount-income {
+    background: rgb(234, 249, 253);
+  }
+
+  &.amount-expense {
+    background: rgb(252, 237, 242);
+  }
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    display: block;
+  }
+
+  .income {
+    color: rgb(96, 209, 242);
+  }
+
+  .expense {
+    color: rgb(235, 87, 131);
+  }
+}
+
+.icon-container {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  position: relative;
+  display: block;
+
+  mat-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.icon-background-blue {
+  background-color: rgb(234, 249, 253);
+}
+
+.icon-color-blue {
+  color: rgb(94, 208, 242);
+}
+
+th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type {
+  padding-left: 0;
+}
+
+tr {
+  td {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+}
+
+.expand-row-container {
+  display: block;
+  position: relative;
+
+  mat-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    right: 0;
+  }
+
+  mat-icon:hover {
+    border-radius: 50px;
+    color: whitesmoke;
+    background-color: rgb(55, 113, 246);
+    // 55, 113, 246
+  }
+}
+
+.details-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+
+  .details-information {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .name {
+      display: block;
+      color: rgb(13, 17, 80);
+
+    }
+
+    .category {
+      display: block;
+      color: rgb(151, 166, 196);
+    }
+  }
+}
+
+.total-amount {
+  display: block;
+  color: rgb(13, 17, 80)
+}
+
+.time {
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+  display: block;
+  position: relative;
+
+  mat-icon, span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+    display: block;
+    color: rgb(202, 210, 224)
+  }
+
+  span {
+    margin-left: 10px;
+  }
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+  box-shadow: none;
+  border: 1px solid rgb(236, 239, 244);
+  border-radius: 10px;
+}

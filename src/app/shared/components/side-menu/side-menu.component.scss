@@ -20,46 +20,6 @@
   position: relative;
 }
 
-.accounts-button {
-  width: 250px !important;
-  height: 80px;
-}
-
-
-
-.contents {
-  height: 60px;
-}
-
-.card-size {
-  width: 90px;
-  display: inline-block;
-  margin-left: 10px;
-}
-
-.dropdown-menu.show {
-  width: 250px;
-}
-
-.bank-card {
-  width: 30px;
-}
-
-.bank-name {
-  font-size: 14px;
-  font-family: "Arial Black", serif;
-}
-
-.amount {
-  font-size: 12px;
-  font-weight: bold;
-  font-family: "Arial", serif;
-}
-
-.dropdown-toggle::after {
-  display: none;
-}
-
 
 .layer-container {
   width: 35px;
@@ -91,8 +51,8 @@
     height: 20px;
     position: absolute;
     left: 0;
-    top:50%;
-    transform: translate(-50%,-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -132,20 +92,12 @@
   }
 }
 
-.account-select-option {
-  display: inline-flex;
+.icon-container {
+  margin-left: 25px;
+  margin-bottom: 30px;
+  bottom: 0;
+  position: absolute;
 }
 
-::ng-deep mat-form-field {
-  width: 100%;
-  padding: 0 25px;
-}
 
-::ng-deep .mat-form-field-underline {
-  display: none;
-}
 
-::ng-deep .mat-form-field-flex {
-  border-radius: 4px !important;
-  border-color: red;
-}

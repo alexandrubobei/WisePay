@@ -1,0 +1,90 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-subtitle>{{title}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <mat-card-content class="card-body">
+    <div class="table-responsive">
+      <table [dataSource]="transactions" mat-table matSort style="width:100%">
+        <ng-container matColumnDef="position">
+          <th *matHeaderCellDef mat-header-cell mat-sort-header> No.</th>
+          <td *matCellDef="let element" mat-cell> {{element.id}} </td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+          <th *matHeaderCellDef mat-header-cell mat-sort-header> Name</th>
+          <td *matCellDef="let element" mat-cell>
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="icon-container icon-background-blue">
+                  <mat-icon class="icon-color-blue">paid</mat-icon>
+                </div>
+              </div>
+              <div class="col-sm-9">
+                <div class="details-container">
+                  <div class="details-information">
+                    <span class="name">{{element.name}}</span>
+                    <span class="category">{{element.category}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="amount">
+          <th *matHeaderCellDef mat-header-cell mat-sort-header> From</th>
+          <td *matCellDef="let element" mat-cell>
+            <div
+              [class.amount-expense]="element.transactionType === 1"
+              [class.amount-income]="element.transactionType === 0"
+              class="amount">
+              <span
+                [class.expense]="element.transactionType === 1"
+                [class.income]="element.transactionType === 0">
+                {{element.amount | currency:"RON ":"symbol"}}
+              </span>
+            </div>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="time">
+          <th *matHeaderCellDef mat-header-cell mat-sort-header> Created at</th>
+          <td *matCellDef="let element" mat-cell>
+            <div class="time">
+              <div class="row">
+                <div class="col-sm-3">
+                  <mat-icon>schedule</mat-icon>
+                </div>
+                <div class="col-sm-9">
+                  <span>{{element.time }}</span>
+                </div>
+              </div>
+            </div>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="totalAmount">
+          <th *matHeaderCellDef mat-header-cell mat-sort-header>Amount</th>
+          <td *matCellDef="let element" mat-cell>
+            <span class="total-amount">
+              {{element.amount| currency:"RON ":"symbol"}}
+            </span>
+          </td>
+        </ng-container>
+
+        <!-- Actions Column -->
+        <ng-container matColumnDef="expand">
+          <th *matHeaderCellDef mat-header-cell></th>
+          <td *matCellDef="let row" mat-cell>
+            <div class="expand-row-container">
+              <mat-icon aria-hidden="false" aria-label="Example home icon">expand_more</mat-icon>
+            </div>
+          </td>
+        </ng-container>
+        <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+      </table>
+      <mat-paginator
+        [pageSizeOptions]="[5, 10, 20]"
+        aria-label="Select page of periodic elements"
+        showFirstLastButtons>
+      </mat-paginator>
+    </div>
+  </mat-card-content>
+</mat-card>

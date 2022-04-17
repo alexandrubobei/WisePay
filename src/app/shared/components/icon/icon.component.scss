@@ -1,0 +1,55 @@
+.icon-container {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  position: relative;
+  display: block;
+
+  mat-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.icon-background-gray {
+  background-color: rgb(245, 246, 249);
+}
+
+.icon-color-gray {
+  color: rgb(154, 168, 197);
+}
+
+
+.icon-background-blue {
+  background-color: rgb(234, 249, 253);
+}
+
+.icon-color-blue {
+  color: rgb(94, 208, 242);
+}
+
+.icon-background-purple {
+  background-color: rgb(238, 236, 252);
+}
+
+.icon-color-purple {
+  color: rgb(106, 90, 244);
+}
+
+.icon-background-red {
+  background-color: rgb(252, 237, 242);
+}
+
+.icon-color-red {
+  color: rgb(235, 77, 127);
+}
+
+.icon-background-orange {
+  background-color: rgb(254, 247, 236);
+}
+
+.icon-color-orange {
+  color: rgb(244, 179, 77);
+}

@@ -2,32 +2,41 @@
   <div class="row toolbar-content" style="padding-right: 0">
     <div class="col-sm-12 col-header" style="padding-right: 0">
       <div class="row toolbar-content">
-        <div class="top-bar">
-          <div class="toolbar">
-            <nav mat-tab-nav-bar class="nav-bar" [tabPanel]="tabPanel">
-              <a mat-tab-link class="nav-bar" *ngFor="let link of links" routerLink="transactions/"
-                 (click)="activeLink = link"
-                 [active]="activeLink == link"> {{link}} </a>
-            </nav>
-            <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
-          </div>
-          <div ngbDropdown class="d-inline-block profile-button">
-            <button type="button" class="btn profile-btn" id="dropdownBasic1" ngbDropdownToggle>Alex Bobei</button>
-            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <button ngbDropdownItem>Action - 1</button>
-              <button ngbDropdownItem>Another Action</button>
-              <button ngbDropdownItem>Something else is here</button>
+        <div class="col-sm-10">
+          <div class="top-bar">
+            <div class="toolbar">
+              <nav [tabPanel]="tabPanel" class="nav-bar" mat-tab-nav-bar>
+                <a (click)="activeLink = link" *ngFor="let link of links" [active]="activeLink == link" class="nav-bar"
+                   mat-tab-link
+                   routerLink="transactions/"> {{link}} </a>
+              </nav>
+              <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
             </div>
           </div>
         </div>
+        <div class="col-sm-2 p-0">
+          <div ngbDropdown class="d-inline-block profile-button">
+            <button class="btn profile-btn" id="dropdownBasic1" ngbDropdownToggle type="button">
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="icon-container">
+                    <app-icon [background]="'icon-background-gray'" [color]="'icon-color-gray'" [icon]="'settings'">
+                    </app-icon>
+                  </div>
+                </div>
+                <div class="col-sm-9 user-name-container">
+                  <span class="user-name">Alex Bobei</span>
+                </div>
+              </div>
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button ngbDropdownItem>Profile</button>
+              <button ngbDropdownItem>Logout</button>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 </mat-toolbar>
-<mat-menu #menu="matMenu">
-  <h4 class="name">John Smith</h4>
-  <p class="designation">Software Engineer</p>
-  <mat-divider></mat-divider>
-  <button mat-menu-item routerLink="/user-management/profile">Profile</button>
-  <button mat-menu-item>Logout</button>
-</mat-menu>

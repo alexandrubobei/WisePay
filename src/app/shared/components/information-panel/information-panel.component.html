@@ -6,9 +6,7 @@
           <div class="information-panel-container">
             <div class="information-panel">
               <div class="col-sm-3">
-                <div class="icon-container {{iconBackgroundClass}}">
-                  <mat-icon class="{{iconColorClass}}">{{icon}}</mat-icon>
-                </div>
+                <app-icon [background]="background" [color]="color" [icon]="icon"></app-icon>
               </div>
               <div class="col-sm-9">
                 <div class="information-container">
@@ -16,8 +14,8 @@
                     <div class="row">
                       <div class="col-sm-12">
                         <div class="information">
-                          <span class="information-type">Cash</span>
-                          <span class="information-value">{{amount}}</span>
+                          <span class="information-type">{{label}}</span>
+                          <span class="information-value">{{amount | currency:"RON":"symbol"}}</span>
                         </div>
                       </div>
                     </div>

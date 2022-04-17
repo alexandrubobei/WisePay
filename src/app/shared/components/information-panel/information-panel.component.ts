@@ -1,19 +1,14 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-information-panel',
   templateUrl: './information-panel.component.html',
   styleUrls: ['./information-panel.component.scss']
 })
-export class InformationPanelComponent implements OnInit {
+export class InformationPanelComponent {
   @Input() icon: string;
-  @Input() iconColorClass: string;
-  @Input() iconBackgroundClass: string;
-  @Input() amount: string;
-
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
+  @Input() color: string;
+  @Input() background: string;
+  @Input() amount: number;
+  @Input() label: string;
 }

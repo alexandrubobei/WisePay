@@ -1,7 +1,7 @@
 .side-menu-button {
   display: block;
   height: 80px;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid rgb(235, 238, 243);
 }
 
 .information-panel-container {
@@ -32,38 +32,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-}
-
-.icon-background-blue {
-  background-color: rgb(234, 249, 253);
-}
-
-.icon-color-blue {
-  color: rgb(94, 208, 242);
-}
-
-.icon-background-purple {
-  background-color: rgb(238, 236, 252);
-}
-
-.icon-color-purple {
-  color: rgb(106, 90, 244);
-}
-
-.icon-background-red {
-  background-color: rgb(252, 237, 242);
-}
-
-.icon-color-red {
-  color: rgb(235, 77, 127);
-}
-
-.icon-background-orange {
-  background-color: rgb(254, 247, 236);
-}
-
-.icon-color-orange {
-  color: rgb(244, 179, 77);
 }
 
 .cash-button {

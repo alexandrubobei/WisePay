@@ -6,7 +6,6 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { Transaction } from '../models/transaction';
-import { TransactionType } from '../models/transaction-type';
 
 /**
  * Budget service
@@ -24,7 +23,7 @@ export class TransactionService extends BaseService {
   }
 
   /**
-   * Creates an http client call and returns a collection of budgets
+   * Creates a http client call and returns a collection of budgets
    */
   public getBudgets(): Observable<Transaction[]> {
     return this.http.get<Transaction[]>(`${ this.baseUrl }/budget/get-budgets`).pipe(
@@ -35,17 +34,17 @@ export class TransactionService extends BaseService {
   /**
    * Creates an http client call and returns a collection of budgets
    */
-  public getTransactionsByAccountAndTransactionType(accountId: number, transactionType: TransactionType): Observable<Transaction[]> {
-    return this.http.get<Transaction[]>(`${ this.baseUrl }/budget/get-budgets/${accountId}`).pipe(
+  public getTransactionsByAccountAndTransactionType(accountId: number): Observable<Transaction[]> {
+    return this.http.get<Transaction[]>(`${ this.baseUrl }/budget/get-budgets/${ accountId }`).pipe(
       map((budgets) => budgets)
     );
   }
 
   /**
-   * Creates an http client call and returns a collection of budgets
+   * Creates a http client call and returns a collection of budgets
    */
   public getTransactionsByAccount(accountId: number): Observable<Transaction[]> {
-    return this.http.get<Transaction[]>(`${ this.baseUrl }/budget/get-budgets/${accountId}`).pipe(
+    return this.http.get<Transaction[]>(`${ this.baseUrl }/budget/get-budgets/${ accountId }`).pipe(
       map((budgets) => budgets)
     );
   }

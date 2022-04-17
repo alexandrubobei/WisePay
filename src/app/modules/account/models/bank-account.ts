@@ -1,7 +1,7 @@
 import { Transaction } from '../../transaction/models/transaction';
 
 /**
- * Account entity
+ * Bank account entity
  */
 export interface BankAccount {
   id: number;

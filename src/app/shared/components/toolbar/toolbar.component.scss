@@ -1,10 +1,3 @@
-@import "../../../../../node_modules/@angular/material/theming";
-
-mat-toolbar {
-  background: #{map_get($mat-indigo, 500)};
-  color: white;
-}
-
 .menu-button {
   width: 100%;
   display: flex;
@@ -22,7 +15,7 @@ mat-toolbar {
   width: 100%;
   border-radius: 10px;
   background-color: white;
-  border: 1px solid whitesmoke;
+  border: 1px solid rgb(236, 239, 244);
   margin-right: 10px;
 }
 
@@ -45,21 +38,42 @@ mat-toolbar {
 
 .profile-button {
   height: 64px;
+  width: 100%;
 
   .profile-btn {
+    width: 100%;
+    padding-right: 0;
     background-color: white;
     height: 64px;
-    border: 1px solid whitesmoke;
+    border: 1px solid rgb(236, 239, 244);
     border-radius: 10px;
   }
 }
 
-::ng-deep {
-  .mat-ink-bar {
-    padding-bottom: 2px;
-    //margin-left:20px;
-    //width:140px !important;
-  }
+.dropdown-toggle::after {
+  transform: translateY(-35px);
+  margin-left: 11.255em;
+}
+
+.user-name-container {
+  display: block;
+  position: relative;
+}
+
+.user-name {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 24px;
+}
+
+.dropdown-menu.show {
+  min-width: 230px;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 .nav-bar {

@@ -4,16 +4,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-// import { NgxIzitoastService } from 'ngx-izitoast';
-import { mergeMap } from 'rxjs/operators';
 
 /**
  * Custom imports
  */
-import { BankAccount } from '../../../account/models/bank-account';
 import { BankAccountService } from '../../../account/services/bank-account.service';
 import { Transaction } from '../../models/transaction';
-import { TransactionType } from '../../models/transaction-type';
 import { TransactionService } from '../../services/transaction.service';
 
 /**
@@ -37,18 +33,12 @@ export class TransactionAddComponent implements OnInit {
   public form: FormGroup;
 
   /**
-   * Transaction type
-   */
-  public transactionTypes: TransactionType;
-
-  /**
    * Constructor
    *
    * @param formBuilder Form builder instance
    * @param transactionService Budget service instance
    * @param accountService Account service instance
    * @param router Navigation router instance
-   * @param toastService Notification service instance
    */
   constructor(
     private formBuilder: FormBuilder,

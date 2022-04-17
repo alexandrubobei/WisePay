@@ -1,0 +1,37 @@
+.contents {
+  height: 60px;
+}
+
+.card-size {
+  width: 90px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.bank-card {
+  width: 30px;
+}
+
+.bank-name {
+  font-size: 14px;
+  font-family: "Arial Black", serif;
+}
+
+.amount {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "Arial", serif;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.accounts-button {
+  width: 250px !important;
+  height: 80px;
+}
+
+.dropdown-menu.show {
+  width: 250px;
+}
